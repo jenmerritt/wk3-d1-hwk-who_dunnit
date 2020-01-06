@@ -16,7 +16,8 @@ const verdict = declareMurderer();
 console.log(verdict);
 
 // // Prediction: The muderer is Miss Scarlet.
-//
+// because scenario.murderer is called in the declareMurderer function.
+
 // // Episode 2
 
 const murderer = 'Professor Plum';
@@ -53,8 +54,9 @@ console.log('Second Verdict: ', secondVerdict);
 
 // // Prediction:
 // // First Verdict: The murderer is Mrs. Peacock.
+// because Mrs Peacock is in declareMurderer function.
 // // Second Verdict: The murdere is Professor Plum.
-//
+// because Pro Plum is in the global scope.
 
 // // Episode 4
 
@@ -73,7 +75,9 @@ console.log(`Suspect three is ${suspectThree}.`);
 
 // // Prediction:
 // // The suspects are Miss Scarlet, Professor Plum, Colonel Mustard.
+// because declareAllSuspects is called and suspectThree is changed within the scope.
 // // Suspect three is Mrs. Peacock.
+// because Mrs Peacock is declared globally. The reassignment within declareAllSuspects is out of scope.
 
 // // Episode 5
 
@@ -97,6 +101,7 @@ console.log(verdict);
 
 // // Prediction:
 // // The weapon is the revolver.
+// because the weapon is updated to revolver when changeWeapon is called.
 
 
 // // Episode 6
@@ -123,7 +128,7 @@ console.log(verdict);
 
 // // Prediction:
 // // The murderer is Mrs. White
-//
+// because changeMuderer is called and the murderers are updated globally - plotTwist is run last so Mrs White.
 
 // // Episode 7
 
@@ -153,10 +158,13 @@ changeMurderer();
 const verdict = declareMurderer();
 console.log(verdict);
 
-// Prediction:
-// The murderer is Miss Scarlet.
-// Correct answer:
-// The murderer is Mr Green.
+// // Prediction:
+// // The murderer is Miss Scarlet.
+// because Miss Scarlet is declared globally when changeMurderer is called.
+
+// // Correct answer:
+// // The murderer is Mr Green.
+// maybe because unexpectedOutcome isn't actually being run?
 
 // // Episode 8
 
@@ -197,6 +205,7 @@ console.log(verdict);
 
 // // Prediction:
 // // The weapon is Candle Stick.
+// Weapon is updated when changeScenario is run. Value can be updated even if const.
 
 // // Episode 9
 
@@ -215,3 +224,4 @@ console.log(verdict);
 
 // // Prediction:
 // // The murderer is Professor Plum.
+// because Mrs Peacock update is block scope.
