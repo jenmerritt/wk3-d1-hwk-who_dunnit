@@ -1,6 +1,3 @@
-// git remote add origin git@github.com:jenmerritt/wk3-d1-hwk-who_dunnit.git
-// git push -u origin master
-
 // Using your knowledge about scope and variable declarations in JavaScript, look at the following code snippets and predict what the output or error will be and why. Copy the following episodes into a JavaScript file and add comments under each one detailing the reason for your predicted output.
 
 // // Episode 1
@@ -157,7 +154,9 @@ const verdict = declareMurderer();
 console.log(verdict);
 
 // Prediction:
-// The murderer is Mr. Green.
+// The murderer is Miss Scarlet.
+// Correct answer:
+// The murderer is Mr Green.
 
 // // Episode 8
 
