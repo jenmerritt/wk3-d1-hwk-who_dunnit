@@ -164,7 +164,7 @@ console.log(verdict);
 
 // // Correct answer:
 // // The murderer is Mr Green.
-// maybe because unexpectedOutcome isn't actually being run?
+// Because when plotTwist is run a new 'murderer' within the scope is defined. unexpectedOutcome then updates that one, but the global scope murderer remains as Mr Green.
 
 // // Episode 8
 
